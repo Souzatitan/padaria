@@ -1,82 +1,160 @@
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.cabeçalho{
-    margin-top: 20px;
-    font-size: 32pt;
+.cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+   
+}
+
+.navegação {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+}
+
+.navegação a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .cafe{
-    margin-top: 50px;
-    margin-left: 130px;
-    margin-right: 130px;
-    font-size: 32pt;
+    margin-top: 4vh;
+    border-top: 1pt solid black ;
+    margin-left: 20%;
+    margin-right: 20%;
     text-align: center;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-
+    border-bottom: 1pt solid black;
 }
-
+h1{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
 .server{
-    margin-top: 20px;
-    text-align: center; 
-    border-bottom: 3px solid black; 
-    margin-left: 130px;
-    margin-right: 130px; 
-    margin-bottom: 20px;
-}
-
-h5{
-    font-weight: bolder;
-    font-size: 18px;
-    
-}
-
-.navegação{
-    font-size: 18pt;
+    margin-top: 1vh;
     text-align: center;
-    background-color: orange;
-    margin-left: 130px;
-    margin-right: 130px; 
-    margin-bottom: 20px;
+    border-bottom: 1pt solid black;
+    margin-left: 20%;
+    margin-right: 20%;
 }
-
-a{
-    text-decoration: none;
-    color: white;
+h5{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+p{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .img{
-    
-    border-top: 3px solid black;
-    margin-left: 130px;
-    margin-right: 130px; 
-    
+    border-radius: 3px;
+    margin-top: 4vh;
+    text-align: center;
 }
 
-#img1{
-    margin-top: 180px;
-    margin-left: 200px;
-    width: 100px;
-    height: 80px;
-    transform: scale(5.0);
-    
-    
-}
 #img2{
-    width: 100px;
-    height: 79px;
-    transform: scale(5.0);
-    margin-left: 420px;
+    width: 41vh;
+    height: 22vh;
 }
-footer{
-    margin-top: 160px;
-    border-top: 3px solid black;
-    margin-left: 130px;
-    margin-right: 130px; 
-    
+
+/* Media queries */
+@media (min-width: 768px) {
+    .toggle-button {
+        display: none;
+    }
+
+    .navegação {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navegação a {
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .cabeçalho{
+        color: black;
+        font-size: 42pt;
+        text-align: left;
+        background-color: white;
+    }
+
+    .navegação{
+        margin-top: 1vh;
+        background-color: orange;
+        margin-left: 20%;
+        margin-right: 20%;
+        transform: translate(200% 20%);
+    } 
+
+    h1{
+        font-size: 42pt;
+    }
+    .cafe{
+        margin-top: 4vh;
+        border-top: 3pt solid black ;
+        margin-left: 20%;
+        margin-right: 20%;
+        text-align: center;
+        border-bottom: 3pt solid black;
+    }
+    .server{
+        margin-top: 1vh;
+        text-align: center;
+        border-bottom: 3pt solid black;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .img{
+        margin-top: 1vh;
+        border-top: 3pt solid black;
+        margin-left: 20%;
+        margin-right: 20%;
+        border-bottom: 3pt solid black;
+    }
+
+    #img1{
+        margin-top: 1vh;
+        width: 45vh;
+    }
+
+    #img2{
+        margin-top: 0vh;
+        width: 41vh;
+        height: 25vh;
+    }
+
+    a{
+        margin-left: 45px;
+    }
 }
